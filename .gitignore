@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# Local-only files
+.env
+.env.*
+!.env.example
+/personal_watcher.py
+
+# macOS metadata
+.DS_Store

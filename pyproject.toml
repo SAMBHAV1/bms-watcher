@@ -1,0 +1,23 @@
+[project]
+name = "bms-watcher"
+version = "0.1.0"
+description = "Monitor a BookMyShow movie page and send email alerts when booking opens"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = [
+    "playwright>=1.65",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+bms-watcher = "bms_watcher:main"
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+source-include = [".env.example", "uv.lock", ".python-version", "tests/**"]
+source-exclude = ["personal_watcher.py", ".env"]
